@@ -38,3 +38,18 @@ $("button#get_data").click(function() {
                               } );
                          }); // end .getJSON
                       }); // end button
+
+
+                      var chart = c3.generate({
+                                          data: {
+                                              columns: table2_dataSet,
+                                              type : 'bar'
+                                          },
+                                          bar: {
+                                              title: "Tasks for Each Stage:",
+                                          }
+                                      });
+
+                               }); // end .getJSON
+                            }); // end button
+}); // document ready
