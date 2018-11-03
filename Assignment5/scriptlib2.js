@@ -38,5 +38,3 @@ $("button#get_data").click(function() {
                               } );
                          }); // end .getJSON
                       }); // end button
-
-}); // document ready
