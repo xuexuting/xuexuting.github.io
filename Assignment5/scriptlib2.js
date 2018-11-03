@@ -13,8 +13,10 @@ $("button#get_data").click(function() {
                       items.push(value.fields.Light_Level_Copy);
                       items.push(value.fields.Pet_Friendly_Copy);
                         items.push(value.fields.Discription);
+                          items.push(value.fields.Images);
                       dataSet.push(items);
                }); // end .each
+               
             $("#example").DataTable( {
                 data: dataSet,
                 retrieve: true,
@@ -33,8 +35,19 @@ $("button#get_data").click(function() {
                                 defaultContent:""},
                                 { title: "Discription",
                                     defaultContent:""},
+                                    { title: "Images",
+                                        defaultContent:""},
 
                   ]
                               } );
+                              var chart = c3.generate({
+                     data: {
+                         columns: table2_dataSet,
+                         type : 'bar'
+                     },
+                     bar: {
+                         title: "Tasks for Each Stage:",
+                     }
+                 });
                          }); // end .getJSON
                       }); // end button
