@@ -16,7 +16,7 @@ $("button#get_data").click(function() {
                           items.push(value.fields.Images);
                       dataSet.push(items);
                }); // end .each
-               
+
             $("#example").DataTable( {
                 data: dataSet,
                 retrieve: true,
@@ -40,6 +40,33 @@ $("button#get_data").click(function() {
 
                   ]
                               } );
+
+                              var table2_items = [];
+         var i = 0;
+         var airtable_read_endpoint =
+         "https://api.airtable.com/v0/appM38HXlEVhxmnqx/Stage?api_key=keyTcsTzckqyBTlk8&view=Grid%20view";
+         var table2_dataSet = [];
+         $.getJSON(airtable_read_endpoint, function(result) {
+                $.each(result.records, function(key,value) {
+                    table2_items = [];
+                        table2_items.push(value.fields.Name);
+                        table2_items.push(value.fields.Total_Entries);
+                        table2_dataSet.push(table2_items);
+                        console.log(table2_items);
+                 }); // end .each
+                 console.log(table2_dataSet);
+                $('#table2').DataTable( {
+                    data: table2_dataSet,
+                    retrieve: true,
+                    ordering: false,
+                    columns: [
+                        { title: "Name",
+                          defaultContent:""},
+                        { title: "Total Entries",
+                          defaultContent:""},
+                    ] // rmf columns
+                } ); // end dataTable
+                
                               var chart = c3.generate({
                      data: {
                          columns: table2_dataSet,
