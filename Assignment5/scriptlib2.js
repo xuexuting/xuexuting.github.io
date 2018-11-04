@@ -50,7 +50,7 @@
                                                                $.getJSON(airtable_read_endpoint, function(result) {
                                                                       $.each(result.records, function(key,value) {
                                                                           table2_items = [];
-                                                                              table2_items.push(value.fields.Plant_Size);
+                                                                              table2_items.push(value.fields.All_Plant_Size);
                                                                               table2_items.push(value.fields.Number);
                                                                               table2_dataSet.push(table2_items);
                                                                               console.log(table2_items);
