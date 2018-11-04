@@ -71,9 +71,9 @@
                                                                       var chart = c3.generate({
                                                                            data: {
                                                                                columns: table2_dataSet,
-                                                                               type : 'pie'
+                                                                               type : 'line'
                                                                            },
-                                                                           pie: {
+                                                                           line: {
                                                                                title: "Tasks for Each Stage:",
                                                                            }
                                                                        });
