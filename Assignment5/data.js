@@ -7,7 +7,8 @@ $("button#get_data").click(function() {
               $.each(result.records, function(key,value) {
                   items = [];
                       items.push(value.fields.Plant_Name);
-                      items.push(value.fields.Every_Plant_Size);
+                      items.push('<td><img src="' + value.fields.Images + '" style="width: 150px;"/></td>');
+                      items.push(value.fields.Plant_Size);
                       items.push(value.fields.Plant_Price_copy);
                       items.push(value.fields.Difficulty_Copy);
                       items.push(value.fields.Light_Level_Copy);
@@ -21,7 +22,9 @@ $("button#get_data").click(function() {
                 columns: [
                     { title: "Plant Name",
                       defaultContent:""},
-                    { title: "Every Plant Size",
+                  { title: "Plant Images",
+                        defaultContent:""},
+                    { title: "Plant Size",
                       defaultContent:"" },
                     { title: "Plant Price",
                       defaultContent:""},
