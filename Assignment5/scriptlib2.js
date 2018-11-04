@@ -45,13 +45,13 @@
                                                                var table2_items = [];
                                                                var i = 0;
                                                                var airtable_read_endpoint =
-                                                               "https://api.airtable.com/v0/appM38HXlEVhxmnqx/Stage?api_key=keyTcsTzckqyBTlk8&view=Grid%20view";
+                                                               "https://api.airtable.com/v0/appAgox3WPwODsSrr/Plant?api_key=keyBadmTVmE3SwXQR";
                                                                var table2_dataSet = [];
                                                                $.getJSON(airtable_read_endpoint, function(result) {
                                                                       $.each(result.records, function(key,value) {
                                                                           table2_items = [];
-                                                                              table2_items.push(value.fields.Name);
-                                                                              table2_items.push(value.fields.Total_Entries);
+                                                                              table2_items.push(value.fields.Plant_Size);
+                                                                              table2_items.push(value.fields.Number);
                                                                               table2_dataSet.push(table2_items);
                                                                               console.log(table2_items);
                                                                        }); // end .each
@@ -61,9 +61,9 @@
                                                                           retrieve: true,
                                                                           ordering: false,
                                                                           columns: [
-                                                                              { title: "Name",
+                                                                              { title: "Plant Size",
                                                                                 defaultContent:""},
-                                                                              { title: "Total Entries",
+                                                                              { title: "Ratio",
                                                                                 defaultContent:""},
                                                                           ] // rmf columns
                                                                       } ); // end dataTable
@@ -71,10 +71,10 @@
                                                                       var chart = c3.generate({
                                                                            data: {
                                                                                columns: table2_dataSet,
-                                                                               type : 'line'
+                                                                               type : 'pie'
                                                                            },
-                                                                           line: {
-                                                                               title: "Tasks for Each Stage:",
+                                                                           pie: {
+                                                                               title: "Plant Size:",
                                                                            }
                                                                        });
 
