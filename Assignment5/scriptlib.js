@@ -45,7 +45,7 @@
                                                                var table2_items = [];
                                                                var i = 0;
                                                                var airtable_read_endpoint =
-                                                               "https://api.airtable.com/v0/appZMxwJjfLoGFRPz/Table%201?api_key=keyBadmTVmE3SwXQR";
+                                                               "https://api.airtable.com/v0/appAgox3WPwODsSrr/Plant?api_key=keyBadmTVmE3SwXQR";
                                                                var table2_dataSet = [];
                                                                $.getJSON(airtable_read_endpoint, function(result) {
                                                                       $.each(result.records, function(key,value) {
