@@ -40,52 +40,51 @@ $("button#get_data").click(function() {
                   ]
                               } );
                          }); // end .getJSON
+                         
+                         var chart = c3.generate({
+                           size: {
+                                 height: 260,
+                                 width: 420
+                                  },
 
+
+                             data: {
+                                 columns:[
+                                   ['data1', 7],
+                                   ['data2', 9],
+                                   ['data3', 6],
+                                   ['data4', 6]
+                                 ],
+                                 names:{
+                                   data1:'small',
+                                   data2:'medium',
+                                   data3:'large',
+                                   data4:'xlarge'
+                                 },
+                                 type: 'bar',
+                                 labels: true
+                             },
+
+                             bar: {
+                                   title:"Plant Size",
+                                   width:{
+                                     ratio: 0.5 // this makes bar width 50% of length between ticks
+                                 },
+                                 // or
+                                 //width: 100 // this makes bar width 100px
+                                 colors: {
+                                            data1:'#ff0000',
+                                            data2:'#00ff00',
+                                            data3:'#0000ff',
+                                            data4:'#0000ff',
+                                        },
+
+
+                                 legend:{ show: false },
+
+                             }
+                         });
 
 
 
                       }); // end button
-
-                      var chart = c3.generate({
-                        size: {
-                              height: 260,
-                              width: 420
-                               },
-
-
-                          data: {
-                              columns:[
-                                ['data1', 7],
-                                ['data2', 9],
-                                ['data3', 6],
-                                ['data4', 6]
-                              ],
-                              names:{
-                                data1:'small',
-                                data2:'medium',
-                                data3:'large',
-                                data4:'xlarge'
-                              },
-                              type: 'bar',
-                              labels: true
-                          },
-
-                          bar: {
-                                title:"Plant Size",
-                                width:{
-                                  ratio: 0.5 // this makes bar width 50% of length between ticks
-                              },
-                              // or
-                              //width: 100 // this makes bar width 100px
-                              colors: {
-                                         data1:'#ff0000',
-                                         data2:'#00ff00',
-                                         data3:'#0000ff',
-                                         data4:'#0000ff',
-                                     },
-
-
-                              legend:{ show: false },
-
-                          }
-                      });
