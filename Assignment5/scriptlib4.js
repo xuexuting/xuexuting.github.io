@@ -51,11 +51,17 @@
 
                                                                    data: {
                                                                        columns:[
-                                                                         ['small', 7],
-                                                                         ['medium', 9],
-                                                                         ['large', 6],
-                                                                         ['xlarge', 6]
+                                                                         ['data1', 7],
+                                                                         ['data2', 9],
+                                                                         ['data3', 6],
+                                                                         ['data4', 6]
                                                                        ],
+                                                                       names:{
+                                                                         data1:'small',
+                                                                         data2:'medium',
+                                                                         data3:'large',
+                                                                         data4:'xlarge'
+                                                                       }
                                                                        type: 'bar',
                                                                        labels: true
                                                                    },
@@ -67,10 +73,10 @@
                                                                        // or
                                                                        //width: 100 // this makes bar width 100px
                                                                        colors: {
-                                                                                  small: '#ff0000',
-                                                                                  medium: '#00ff00',
-                                                                                  large: '#0000ff',
-                                                                                  xlarge: '#0000ff',
+                                                                                  data1:'#ff0000',
+                                                                                  data2:'#00ff00',
+                                                                                  data3:'#0000ff',
+                                                                                  data4:'#0000ff',
                                                                               },
 
 
