@@ -52,8 +52,8 @@
                                                                        columns: [
                                                                          ['small', 7],
                                                                          ['medium', 9],
-                                                                          ['large', 6],
-                                                                           ['xlarge', 6]
+                                                                         ['large', 6],
+                                                                         ['xlarge', 6]
                                                                        ],
                                                                        type: 'bar',
                                                                        labels: true
@@ -64,7 +64,7 @@
                                                                        },
                                                                        // or
                                                                        //width: 100 // this makes bar width 100px
-                                                                       colors: {small: 'green', medium: 'blue', large: '#2d7227', xlarge: '#0d5407'},
+                                                                       colors: {small:'green', medium:'blue', large:'#2d7227', xlarge:'#0d5407'},
                                                                        legend: { show: false },
 
                                                                    }
