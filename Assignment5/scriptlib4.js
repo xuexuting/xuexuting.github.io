@@ -43,6 +43,10 @@
                                                                }); // end .getJSON
 
                                                                var chart = c3.generate({
+                                                                 size: {
+                                                                       height: 240,
+                                                                       width: 480
+                                                                        },
                                                                    data: {
                                                                        columns: [
                                                                          ['small', 7],
@@ -58,9 +62,7 @@
                                                                        },
                                                                        // or
                                                                        //width: 100 // this makes bar width 100px
-                                                                   color: {
-                                                                         pattern: ['#b6edb1', '#64aa5d', '#2d7227', '#0d5407',]
-                                                                       },
+                                                                   
 
                                                                    }
                                                                });
