@@ -44,9 +44,11 @@
 
                                                                var chart = c3.generate({
                                                                  size: {
-                                                                       height: 280,
-                                                                       width: 480
+                                                                       height: 240,
+                                                                       width: 420
                                                                         },
+                                                                colors: {small: 'green', medium: 'blue', large: '#2d7227', xlarge: '#0d5407'},
+                                                                legend: { show: false },
                                                                    data: {
                                                                        columns: [
                                                                          ['small', 7],
@@ -63,8 +65,8 @@
                                                                        },
                                                                        // or
                                                                        //width: 100 // this makes bar width 100px
-                                                                   colors: {small: 'green', medium: 'blue', large: '#2d7227', xlarge: '#0d5407'},
-                                                                   legend: { show: false }
+
+                                                                   
                                                                    }
                                                                });
 
