@@ -54,7 +54,8 @@
                                                                           ['large', 6],
                                                                            ['xlarge', 6]
                                                                        ],
-                                                                       type: 'bar'
+                                                                       type: 'bar',
+                                                                       labels: true
                                                                    },
                                                                    bar: {
                                                                        width: {
@@ -62,7 +63,7 @@
                                                                        },
                                                                        // or
                                                                        //width: 100 // this makes bar width 100px
-                                                                   colors: {small: '#b6edb1', medium: '#64aa5d', large: '#2d7227',xlarge: '#0d5407'}
+                                                                   colors: {small: '#b6edb1', medium: '#64aa5d', large: '#2d7227', xlarge: '#0d5407'},
 
                                                                    }
                                                                });
