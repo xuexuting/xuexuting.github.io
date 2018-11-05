@@ -47,25 +47,19 @@ $("button#get_data").click(function() {
                                  height: 200,
                                  width: 320
                                   },
-
-
                              data: {
                                  columns:[
                                    ['data1', 9],
                                    ['data2', 21],
-
                                  ],
                                  names:{
                                    data1:'Yes',
                                    data2:'No',
-
                                  },
                                  type: 'bar',
                                  labels: true
                              },
-
                              bar: {
-
                                    width:{
                                      ratio: 0.5 // this makes bar width 50% of length between ticks
                                  },
@@ -74,14 +68,17 @@ $("button#get_data").click(function() {
                                  colors: {
                                             data1:'#ff0000',
                                             data2:'#00ff00',
-
                                         },
-
-
                                  legend:{ show: false },
-
                              }
                          });
+
+
+
+
+
+
+
 
 
 
