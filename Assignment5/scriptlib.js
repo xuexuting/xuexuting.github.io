@@ -66,7 +66,7 @@
                                                          color: {
                                                            pattern: ['#b6edb1', '#64aa5d', '#2d7227', '#0d5407',]
                                                          }
-                                                      });
+                                            
 
 
                                                             }); // end button
