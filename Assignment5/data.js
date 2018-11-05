@@ -45,7 +45,7 @@ $("button#get_data").click(function() {
                          var chart = c3.generate({
                            size: {
                                  height: 200,
-                                 width: 350
+                                 width: 320
                                   },
 
 
@@ -74,7 +74,7 @@ $("button#get_data").click(function() {
                                  colors: {
                                             data1:'#ff0000',
                                             data2:'#00ff00',
-                                          
+
                                         },
 
 
@@ -82,6 +82,7 @@ $("button#get_data").click(function() {
 
                              }
                          });
+
 
 
 
