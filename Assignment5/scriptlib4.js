@@ -63,8 +63,8 @@
                                                                        },
                                                                        // or
                                                                        //width: 100 // this makes bar width 100px
-                                                                   colors: {small: '#b6edb1', medium: '#64aa5d', large: '#2d7227', xlarge: '#0d5407'},
-
+                                                                   colors: {small: 'green', medium: 'blue', large: '#2d7227', xlarge: '#0d5407'},
+                                                                   legend: { show: false }
                                                                    }
                                                                });
 
