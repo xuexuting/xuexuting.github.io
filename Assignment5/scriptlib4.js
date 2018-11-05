@@ -49,7 +49,7 @@
                                                                         },
 
                                                                    data: {
-                                                                       columns: [
+                                                                       columns:[
                                                                          ['small', 7],
                                                                          ['medium', 9],
                                                                          ['large', 6],
@@ -59,13 +59,13 @@
                                                                        labels: true
                                                                    },
                                                                    bar: {
-                                                                       width: {
+                                                                       width:{
                                                                            ratio: 0.5 // this makes bar width 50% of length between ticks
                                                                        },
                                                                        // or
                                                                        //width: 100 // this makes bar width 100px
-                                                                       colors: {small:'green', medium:'blue', large:'#2d7227', xlarge:'#0d5407'},
-                                                                       legend: { show: false },
+                                                                       colors:{small:'green', medium:'blue', large:'pink', xlarge:'red'},
+                                                                       legend:{ show: false },
 
                                                                    }
                                                                });
