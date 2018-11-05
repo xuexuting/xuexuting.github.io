@@ -48,6 +48,7 @@
                                                                        width: 420
                                                                         },
 
+
                                                                    data: {
                                                                        columns:[
                                                                          ['small', 7],
@@ -64,7 +65,9 @@
                                                                        },
                                                                        // or
                                                                        //width: 100 // this makes bar width 100px
-                                                                       colors:{small:'green', medium:'blue', large:'pink', xlarge:'red'},
+                                                                       color: {
+                                                                            pattern: ['#1f77b4', '#aec7e8', '#ff7f0e', '#ffbb78']
+                                                                            },
                                                                        legend:{ show: false },
 
                                                                    }
