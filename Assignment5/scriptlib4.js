@@ -47,7 +47,13 @@
                                                                        height: 260,
                                                                        width: 420
                                                                         },
-
+                                                                        
+                                                                        padding: {
+                                                                               top: 40,
+                                                                               right: 100,
+                                                                               bottom: 40,
+                                                                               left: 100,
+                                                                           },
 
                                                                    data: {
                                                                        columns:[
