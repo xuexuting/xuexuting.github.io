@@ -15,6 +15,12 @@
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css"
 integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
 
+<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/d3/3.4.11/d3.js"></script>
+<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/c3/0.1.29/c3.js"></script>
+<link href="//cdnjs.cloudflare.com/ajax/libs/c3/0.1.29/c3.css" rel="stylesheet" type="text/css">
+
+
+
 
 </head>
 <body>
@@ -39,7 +45,7 @@ integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeV
       <!-- Main jumbotron for a primary marketing message or call to action -->
       <div class="jumbotron"   style="background-image:url(image1.jpg)">
         <div class="container">
-          <h1 class="display-3"> <i class="fas fa-tree"></i> Popular Indoor Plant</h1>
+          <h1 class="display-3"> <i class="fas fa-tree"></i> 28 Popular Indoor Plants !</h1>
           <p>Indoor plants not only act as a quick decorating tool, they also help clean the environment and air around them.
             MyWebsite found some popular indoor houseplants that easy to take care of.</p>
         </div>
@@ -49,6 +55,7 @@ integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeV
                <div class="table-responsive">
                <table id="example" width="100%" class="table table-bordered">
                </table>
+               <div id="chart"></div>
              </div>
       </center>
       </div>
