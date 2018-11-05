@@ -61,7 +61,7 @@
                                                                          data2:'medium',
                                                                          data3:'large',
                                                                          data4:'xlarge'
-                                                                       }
+                                                                       },
                                                                        type: 'bar',
                                                                        labels: true
                                                                    },
