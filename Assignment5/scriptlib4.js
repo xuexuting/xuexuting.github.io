@@ -59,15 +59,21 @@
                                                                        type: 'bar',
                                                                        labels: true
                                                                    },
+
                                                                    bar: {
                                                                        width:{
                                                                            ratio: 0.5 // this makes bar width 50% of length between ticks
                                                                        },
                                                                        // or
                                                                        //width: 100 // this makes bar width 100px
-                                                                       color: {
-                                                                            pattern: ['#1f77b4', '#aec7e8', '#ff7f0e', '#ffbb78']
-                                                                            },
+                                                                       colors: {
+                                                                                  small: '#ff0000',
+                                                                                  medium: '#00ff00',
+                                                                                  large: '#0000ff',
+                                                                                  xlarge: '#0000ff',
+                                                                              },
+
+
                                                                        legend:{ show: false },
 
                                                                    }
