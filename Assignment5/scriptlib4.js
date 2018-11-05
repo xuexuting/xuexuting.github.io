@@ -44,7 +44,7 @@
 
                                                                var chart = c3.generate({
                                                                  size: {
-                                                                       height: 240,
+                                                                       height: 260,
                                                                        width: 420
                                                                         },
 
