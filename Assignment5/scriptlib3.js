@@ -43,22 +43,24 @@
                                                                }); // end .getJSON
 
                                                                var chart = c3.generate({
-                                                                   data: {
-                                                                       columns: [
-                                                                           ['sample', 30, 200, 100, 400, 150, 250],
-                                                                           ['sample2', 130, 300, 200, 500, 250, 350]
-                                                                       ],
+                                                         data: {
+                                                             columns: [
+                                                                 ['data1', 30, 200, 100, 400, 150, 250],
+                                                                 ['data2', 130, 100, 140, 200, 150, 50],
+                                                                  ['data2', 130, 100, 140, 200, 150, 50],
+                                                                   ['data2', 130, 100, 140, 200, 150, 50]
+                                                             ],
+                                                             type: 'bar'
+                                                         },
+                                                         bar: {
+                                                             width: {
+                                                                 ratio: 0.5 // this makes bar width 50% of length between ticks
+                                                             }
+                                                             // or
+                                                             //width: 100 // this makes bar width 100px
+                                                         }
+                                                     });
 
-                                                                   },
-                                                                   axis: {
-                                                                       x: {
-                                                                           label: 'X Label'
-                                                                       },
-                                                                       y: {
-                                                                           label: 'Y Label'
-                                                                       }
-                                                                   }
-                                                               });
 
 
                                                             }); // end button
