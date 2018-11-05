@@ -63,11 +63,11 @@
                                                              // or
                                                              //width: 100 // this makes bar width 100px
                                                              color: {
-                                                           pattern: ['#1f77b4', '#aec7e8', '#ff7f0e', '#ffbb78',]
-                                                                }
+                                                           pattern: ['#b6edb1', '#64aa5d', '#2d7227', '#0d5407',]
                                                          }
                                                      });
 
+                                              }); // end .getJSON
 
 
-                                                            }); // end button
+                                          }); // end button
