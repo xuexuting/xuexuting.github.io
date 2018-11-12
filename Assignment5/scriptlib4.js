@@ -55,7 +55,18 @@
                                                                                table2_dataSet.push(table2_items);
                                                                                console.log(table2_items);
                                                                         }); // end .each
-                                                                    
+                                                                        
+                                                                        console.log(table2_dataSet);
+                                                                       $('#table2').DataTable( {
+                                                                           data: table2_dataSet,
+                                                                           retrieve: true,
+                                                                           ordering: false,
+                                                                           columns: [
+                                                                               { title: "Difficulty Level",
+                                                                                 defaultContent:""},
+                                                                               { title: "Number of Plants",
+                                                                                 defaultContent:""},
+                                                                           ] // rmf columns
                                                                        } ); // end dataTable
 
                                                                        var chart = c3.generate({
