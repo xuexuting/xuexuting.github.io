@@ -63,7 +63,7 @@
                                                                            columns: [
                                                                                { title: "Difficulty Level",
                                                                                  defaultContent:""},
-                                                                               { title: "Number of Plant",
+                                                                               { title: "Number of Plants",
                                                                                  defaultContent:""},
                                                                            ] // rmf columns
                                                                        } ); // end dataTable
