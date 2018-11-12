@@ -42,48 +42,46 @@
                                                                     } );
                                                                }); // end .getJSON
 
-                                                               var chart = c3.generate({
-                                                                 size: {
-                                                                       height: 260,
-                                                                       width: 420
-                                                                        },
-                                                            
+                                                               var table2_items = [];
+                                                                var i = 0;
+                                                                var airtable_read_endpoint =
+                                                                "https://api.airtable.com/v0/appAgox3WPwODsSrr/Difficulty?api_key=keyBadmTVmE3SwXQR";
+                                                                var table2_dataSet = [];
+                                                                $.getJSON(airtable_read_endpoint, function(result) {
+                                                                       $.each(result.records, function(key,value) {
+                                                                           table2_items = [];
+                                                                               table2_items.push(value.fields.Name);
+                                                                               table2_items.push(value.fields.Number_difficulty);
+                                                                               table2_dataSet.push(table2_items);
+                                                                               console.log(table2_items);
+                                                                        }); // end .each
+                                                                        console.log(table2_dataSet);
+                                                                       $('#table2').DataTable( {
+                                                                           data: table2_dataSet,
+                                                                           retrieve: true,
+                                                                           ordering: false,
+                                                                           columns: [
+                                                                               { title: "Difficulty Level",
+                                                                                 defaultContent:""},
+                                                                               { title: "Number of Plant",
+                                                                                 defaultContent:""},
+                                                                           ] // rmf columns
+                                                                       } ); // end dataTable
 
-                                                                   data: {
-                                                                       columns:[
-                                                                         ['data1', 7],
-                                                                         ['data2', 9],
-                                                                         ['data3', 6],
-                                                                         ['data4', 6]
-                                                                       ],
-                                                                       names:{
-                                                                         data1:'small',
-                                                                         data2:'medium',
-                                                                         data3:'large',
-                                                                         data4:'xlarge'
-                                                                       },
-                                                                       type: 'bar',
-                                                                       labels: true
-                                                                   },
+                                                                       var chart = c3.generate({
+                                                                            data: {
+                                                                                columns: table2_dataSet,
+                                                                                type : 'bar'
+                                                                            },
+                                                                            axis: {
+                                                                              x: {label: 'Difficulty Level'},
+                                                                              y: {label: 'Number of Plant'}
+                                                                            },
+                                                                            bar: {
+                                                                                title: "Difficulty Level of All Plants:",
+                                                                            }
+                                                                        });
 
-                                                                   bar: {
-                                                                         title:"Plant Size",
-                                                                         width:{
-                                                                           ratio: 0.5 // this makes bar width 50% of length between ticks
-                                                                       },
-                                                                       // or
-                                                                       //width: 100 // this makes bar width 100px
-                                                                       colors: {
-                                                                                  data1:'#ff0000',
-                                                                                  data2:'#00ff00',
-                                                                                  data3:'#0000ff',
-                                                                                  data4:'#0000ff',
-                                                                              },
-
-
-                                                                       legend:{ show: false },
-
-                                                                   }
-                                                               });
+                                                                 }); // end .getJSON
 
                                                             }); // end button
