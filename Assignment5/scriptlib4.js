@@ -74,7 +74,7 @@
                                                                                 type : 'bar'
                                                                             },
                                                                             axis: {
-                                                                              x: {label: 'Difficulty Level'},
+                                                                              x: {label: 'Difficulty'},
                                                                               y: {label: 'Number of Plant'}
                                                                             },
                                                                             bar: {
