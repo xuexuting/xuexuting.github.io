@@ -5,7 +5,7 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Buy Some Plants</title>
+  <title>养棵植物吧</title>
 
   <!-- Bootstrap -->
    <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
@@ -28,6 +28,7 @@
    <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.3.4/leaflet.js"></script>
    <script src="https://api.tiles.mapbox.com/mapbox.js/plugins/leaflet-markercluster/v0.4.0/leaflet.markercluster.js"></script>
 
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
 </head>
 
 <body class="homepage">
@@ -41,7 +42,7 @@
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                     </button>
-          <a class="navbar-brand" href="howtobuy.html">植物</a>
+          <a class="navbar-brand" href="howtobuy.html">养棵植物</a>
         </div>
 
         <div class="collapse navbar-collapse navbar-right">
@@ -126,16 +127,66 @@
 
 
 
-      <div class="container" >
-        <div class="get-started center wow fadeInDown">
-          <h2>上海花木市场</h2>
-          <p class="lead">
-            客厅是家庭聚会、娱乐以及会客的重要空间，摆放在客厅的植物不仅要能够净化空气，
-            体态更要美观雅致，观赏起来才会感到心情愉悦。<br>
-            客厅的角落中，适合摆放大型绿叶植物，比如幸福树、龟背竹、鹤望兰等，净化空气的同时增加了大气、爽朗的感觉。 <br>
-          </p>
 
+        <div class="container" >
+          <div class="get-started center wow fadeInDown">
+            <h2>上海部分花木市场</h2>
 
+            <div id="app">
+
+                        <ul style="list-style-type: none;
+                        margin: 0;
+                        padding: 0;
+                        display: flex;
+                        justify-content: center;
+                        flex-wrap: wrap;">
+                            <li v-for="item in items" style="  width: 370px;
+                              background: #e6eaec;
+                              border-radius: 15px;
+                              padding: 15px;
+                              margin: 30px;">
+                                <h3  style="text-align: center;"><strong>{{ item['fields']['Flowershop'] }}</strong></h3>
+                                    <p style="text-align: left"><strong>地址：</strong>{{ item['fields']['address'] }}</p>
+                                    <p style="text-align: left"><strong>简介：</strong>{{ item['fields']['Discription'] }}</p>
+
+                            </li>
+                        </ul1>
+                    </div><!--app-->
+
+                    <!-- Include Dependancy Scripts -->
+                            <script type="text/javascript" src="https://unpkg.com/vue"></script>
+                            <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.16.2/axios.min.js"></script>
+                    <script type="text/javascript">
+                                var app = new Vue({
+                                    el: '#app',
+                                    data: {
+                                        items: []
+                                    },
+                                    mounted: function(){
+                                       this.loadItems();
+                                    },
+                                    methods: {
+                                        loadItems: function(){
+
+                                            // Init variables
+                                            var self = this
+                                            var app_id = "appLoT6UQEuKYLDsF";
+                                            var app_key = "keyBadmTVmE3SwXQR";
+                                            this.items = []
+                    axios.get(
+                                                "https://api.airtable.com/v0/"+app_id+"/Flowershop?view=Grid%20view",
+                                                {
+                                                    headers: { Authorization: "Bearer "+app_key }
+                                                }
+                                            ).then(function(response){
+                                                self.items = response.data.records
+                                            }).catch(function(error){
+                                                console.log(error)
+                                            })
+                                        }
+                                    }
+                                })
+                            </script>
 
         </div>
       </div>
@@ -154,11 +205,10 @@
         <div class="col-lg-12">
           <div class="social">
             <ul class="social-share">
-              <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-              <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-              <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
-              <li><a href="#"><i class="fa fa-dribbble"></i></a></li>
-              <li><a href="#"><i class="fa fa-skype"></i></a></li>
+              <li><a href="#"><i class="fab fa-weixin"></i></a></li>
+              <li><a href="#"><i class="fab fa-weibo"></i></a></li>
+              <li><a href="#"><i class="fas fa-envelope-open"></i></a></li>
+              <li><a href="#"><i class="fab fa-instagram"></i></a></li>
             </ul>
           </div>
         </div>
