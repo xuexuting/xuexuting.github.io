@@ -83,10 +83,11 @@
                           background: #e6e6e6;
                           border-radius: 15px;
                           padding: 20px;
-
                           margin: 50px;">
                             <h3  style="text-align: center;color:#6D8188;font-size:22px">{{ item['fields']['Plant_Name'] }}</h3>
                             <p><strong>植物简介：</strong>{{ item['fields']['Discription'] }}</p>
+                            <img :src="item['fields']['Photo'][0]['thumbnails']['large']['url']" alt=""
+                             v-if="item['fields']['Photo']" width="280"  style="display: block;  margin-left: auto;  margin-right: auto; padding:20px">
                                 <p><strong>植物大小：</strong>{{ item['fields']['Plant_Size_copy'] }}</p>
                                 <p><strong>植物价格：</strong>{{ item['fields']['Plant_Price_copy'] }}</p>
                                 <p><strong>养殖难度：</strong>{{ item['fields']['Difficulty_Copy'] }}</p>
