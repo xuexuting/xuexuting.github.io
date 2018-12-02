@@ -39,6 +39,21 @@
    <script src="https://api.tiles.mapbox.com/mapbox.js/plugins/leaflet-markercluster/v0.4.0/leaflet.markercluster.js"></script>
 
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+
+<style type="text/css">
+      body {
+        padding: 0;
+        margin: 0;
+      }
+      html, body, .container, .row, .col-xs-12, .col-sm-12, .col-md-12, #map {
+        height: 100%;
+      }
+    </style>
+
+
+
+
+
 </head>
 
 <body class="homepage">
@@ -89,7 +104,14 @@
 
 
         <div class="container">
+
+          <div class="row">
+                <div class="col-xs-12 col-sm-12 col-md-12">
+
         <div id="map" style="width: 800px; height: 440px; border: 1px solid #AAA; margin-left: auto;margin-right: auto;"></div>
+
+      </div><!-- column -->
+        </div><!-- row -->
 
         <script>
             var mapboxTiles = L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {attribution: 'Map data &copy; <a href="https://openstreetmap.org">OpenStreetMap</a>', maxZoom: 18,})
