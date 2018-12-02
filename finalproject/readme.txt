@@ -1,6 +1,2 @@
-Thanks for downloading this theme!
+This is my final project and I am still working on it.
 
-Theme Name: Gp
-Theme URL: https://bootstrapmade.com/gp-free-multipurpose-html-bootstrap-templat/
-Author: BootstrapMade
-Author URL: https://bootstrapmade.com
