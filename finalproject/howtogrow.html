@@ -40,6 +40,25 @@
 
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
 
+<style>
+  .return-top{
+      width:50px;
+      height:50px;
+      font:bold 20px/50px "宋体";
+      color:#fff;
+      background-color:#6D8188;
+      position:fixed;
+      bottom:20px;
+      right:20px;
+      text-align:center;
+      cursor:pointer;
+      display:none;
+  }
+  .return-top.active{
+      display:block;
+  }
+</style>
+
 </head>
 
 <body class="homepage">
@@ -147,13 +166,36 @@
                         </script>
 
 
-
-
-
-
   </section>
   <!--/about-us-->
 
+  <div class="return-top" id="return_top">▲</div>
+  <script>
+
+      var return_top = document.getElementById("return_top");
+      var sTop;
+      window.onscroll = function(){
+          //sTop :滚动条距离顶部的距离数值
+          sTop = document.body.scrollTop||document.documentElement.scrollTop;
+          if(sTop>300){
+              return_top.className = "return-top active";
+          }else{
+              return_top.className = "return-top";
+          }
+      }
+
+      return_top.onclick = function(){
+          var termId = setInterval(function(){
+              sTop-=50;
+              if(sTop<=0){
+
+                  clearInterval(termId);
+              }
+              window.scrollTo(0,sTop);
+
+          },1);
+      }
+  </script>
 
 
   <div class="top-bar">
