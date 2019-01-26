@@ -41,8 +41,8 @@
     <div class="container">
       <div class="center wow fadeInDown">
         <h2>一盆绿植，一份生机</h2>
-        <p class="lead">不管是在家中还是在办公室，添上一盆绿植，整个场所都会显得生机勃勃。 <br>如果不知道什么植物适合你，那么去花怎么养板块看看吧！<br>
-        如果你已对常见植物都有所熟识，不如探索一下 <a href="blog.html" style="color:#c6b2c8">“特别专题”</a> ，希望能给你特别的惊喜。</p>
+        <p class="lead">不管是在家中还是在办公室，添上一盆绿植，整个场所都会显得生机勃勃。 <br>如果不知道什么植物适合你，那么去<a href="http://dev-xuexuting.pantheonsite.io/gallery/" style="color:#c6b2c8">“常见品种”</a> 板块看看吧！<br>如果想了解如何用植物将家中装点的更美观，欢迎点击<a href="http://dev-xuexuting.pantheonsite.io/page_howtoput/" style="color:#c6b2c8">“布置技巧”</a>来探索。<br>
+        如果你已对常见植物都有所熟识，不如探索一下 <a href="http://dev-xuexuting.pantheonsite.io/page_blog/" style="color:#c6b2c8">“特别专题”</a> ，希望能给你特别的惊喜。</p>
       </div>
 
 
