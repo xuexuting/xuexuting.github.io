@@ -20,17 +20,28 @@
    <section id="feature" class="transparent-bg" >
     <div class="container" >
       <div class="get-started  wow fadeInDown" style="background:#ffffff">
-		    <div class="col-lg-8 col-md-10 mx-auto" style=" margin-left:18%;
+		    <div class="col-lg-8 col-md-10 mx-auto" style=" margin-left:16%;
     margin-right: 0px;" >
 				<?php
 $query = new AirpressQuery();
 $query->setConfig("Default");
 $query->table("Plant");
 
+
 $events = new AirpressCollection($query);
 
 foreach($events as $e){
-echo $e["Plant_Name"].": ".$e["Discription"].$e["Breed"]." ".$e["Function"]."<br><hr><br>";
+echo
+$e["Name"]."<br>
+<h3 center><strong>".$e["Plant_Name"]."</h3></strong><br>
+<strong>植物简介</strong>：".$e["Discription"]."<br>
+<strong>植物大小</strong>：".$e["Plant_Size_copy"]."<br>
+<strong>植物价格</strong>：".$e["Plant_Price_copy"]."<br>
+<strong>栽培难度</strong>：".$e["Difficulty_Copy"]."<br>
+<strong>光线要求</strong>：".$e["Light_Level_Copy"]."<br>
+<strong>是否有毒</strong>：".$e["Pet_Friendly_Copy"]."<br>
+<strong>栽培方法</strong>：".$e["Breed"]." <br>
+<strong>植物功能</strong>：".$e["Function"]."<br><hr><br>";
 }
 ?>
 
@@ -40,7 +51,7 @@ echo $e["Plant_Name"].": ".$e["Discription"].$e["Breed"]." ".$e["Function"]."<br
 					<br>
 		    <div class="clearfix" >         
 
-		      <a class="btn btn-primary float-right" href="http://dev-xuexuting.pantheonsite.io/" style=" margin-left:45%;
+		      <a class="btn btn-primary float-right" href="http://dev-xuexuting.pantheonsite.io/gallery/" style=" margin-left:45%;
     margin-right: 0px;">返回</a>
 				</div>
  </div>
