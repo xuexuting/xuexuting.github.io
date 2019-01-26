@@ -2,7 +2,16 @@
 
     <!-- Page Header -->
 
-<section id="services" class="service-item">
+    <?php
+    if ( have_posts() ) : while ( have_posts() ) : the_post();
+     if ( has_post_thumbnail() ) {
+    $feat_image_url = wp_get_attachment_url( get_post_thumbnail_id() );
+    echo '<section id="services" class="service-item" style="background-image:url('.$feat_image_url.');">';
+         }
+    	  endwhile;
+             endif;
+             ?>
+             
     <div class="container">
       <div class="center wow fadeInDown">
 
