@@ -43,9 +43,9 @@
   				 <?php if ( has_post_thumbnail() ) {
      			 the_post_thumbnail('eq-thumbnail');
   			 }?>
-   			<h2 style="text-align:center;color:#6D8188"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
+   			<h2 style="text-align:center;color:#9a769d"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
    			<p class="entry-meta" style="text-align:center;color:#6D8188"><?php the_time("F d, Y"); ?></p>
-   			<?php the_excerpt(); ?>
+   			<h3  style="color:#4e585b"><?php the_excerpt(); ?></h3>
 			</li>
 			<?php endwhile; wp_reset_query(); ?>
 			</div>
