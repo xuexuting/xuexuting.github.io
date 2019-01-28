@@ -37,6 +37,7 @@ foreach($events as $e){
 echo
 $e["Name"]."<br>
 <h3 center><strong>".$e["Plant_Name"]."</h3></strong><br>
+<img src='".$e["Images"]."'><br><br>
 <strong>植物简介</strong>：".$e["Discription"]."<br>
 <strong>植物大小</strong>：".$e["Plant_Size_copy"]."<br>
 <strong>植物价格</strong>：".$e["Plant_Price_copy"]."<br>
