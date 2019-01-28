@@ -8,7 +8,10 @@
     <div class="container">
       <div class="center wow fadeInDown">
 		 <h2>常见品种</h2>
-		  <h3 style="color:#ecdeed">在这里，你可以查阅一些常见室内植物的简介、特性和栽培方法。</h3>
+		  <h3 style="color:#ecdeed">在这里，你可以查阅一些常见室内植物的简介、特性和栽培方法。
+        如果你想购买一些热门绿植装点居室，可以点击<a href="http://dev-xuexuting.pantheonsite.io/gallery/" style="color:#c6b2c8">“常见品种”</a>查看。<br>
+  			  如果想了解如何用植物将家中装点的更美观，欢迎点击<a href="http://dev-xuexuting.pantheonsite.io/page_howtoput/" style="color:#c6b2c8">“布置技巧”</a>来探索。
+        </h3>
 </div>
 
 
